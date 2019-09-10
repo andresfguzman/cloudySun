@@ -15,6 +15,18 @@
 		7EA1228A23270A01005E1974 /* CloudySunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1228923270A01005E1974 /* CloudySunTests.swift */; };
 		7EA1229523270A01005E1974 /* CloudySunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1229423270A01005E1974 /* CloudySunUITests.swift */; };
 		7EA122A32327107B005E1974 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA122A22327107B005E1974 /* Alamofire.framework */; };
+		7EA122A92327136A005E1974 /* CSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122A82327136A005E1974 /* CSService.swift */; };
+		7EA122AB232713FF005E1974 /* CSLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122AA232713FF005E1974 /* CSLocation.swift */; };
+		7EA122AD2327152F005E1974 /* CSWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122AC2327152F005E1974 /* CSWeather.swift */; };
+		7EA122B023272C82005E1974 /* CSForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122AF23272C82005E1974 /* CSForecastService.swift */; };
+		7EA122B223272D91005E1974 /* CSRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122B123272D91005E1974 /* CSRepository.swift */; };
+		7EA122B4232731ED005E1974 /* CSForecastRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122B3232731ED005E1974 /* CSForecastRepository.swift */; };
+		7EA122B62327330E005E1974 /* UseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122B52327330E005E1974 /* UseCaseImpl.swift */; };
+		7EA122B82327336A005E1974 /* GetForecastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122B72327336A005E1974 /* GetForecastUseCase.swift */; };
+		7EA122BA232733C4005E1974 /* GetForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122B9232733C4005E1974 /* GetForecast.swift */; };
+		7EA122BD232735F0005E1974 /* CSForecastWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122BC232735F0005E1974 /* CSForecastWebService.swift */; };
+		7EA122C123274B31005E1974 /* CSForecastRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122C023274B31005E1974 /* CSForecastRepositoryImpl.swift */; };
+		7EA122C3232757EC005E1974 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122C2232757EC005E1974 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +61,18 @@
 		7EA1229423270A01005E1974 /* CloudySunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudySunUITests.swift; sourceTree = "<group>"; };
 		7EA1229623270A01005E1974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EA122A22327107B005E1974 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		7EA122A82327136A005E1974 /* CSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSService.swift; sourceTree = "<group>"; };
+		7EA122AA232713FF005E1974 /* CSLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSLocation.swift; sourceTree = "<group>"; };
+		7EA122AC2327152F005E1974 /* CSWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSWeather.swift; sourceTree = "<group>"; };
+		7EA122AF23272C82005E1974 /* CSForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSForecastService.swift; sourceTree = "<group>"; };
+		7EA122B123272D91005E1974 /* CSRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSRepository.swift; sourceTree = "<group>"; };
+		7EA122B3232731ED005E1974 /* CSForecastRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSForecastRepository.swift; sourceTree = "<group>"; };
+		7EA122B52327330E005E1974 /* UseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseImpl.swift; sourceTree = "<group>"; };
+		7EA122B72327336A005E1974 /* GetForecastUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForecastUseCase.swift; sourceTree = "<group>"; };
+		7EA122B9232733C4005E1974 /* GetForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForecast.swift; sourceTree = "<group>"; };
+		7EA122BC232735F0005E1974 /* CSForecastWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSForecastWebService.swift; sourceTree = "<group>"; };
+		7EA122C023274B31005E1974 /* CSForecastRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSForecastRepositoryImpl.swift; sourceTree = "<group>"; };
+		7EA122C2232757EC005E1974 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,11 +126,16 @@
 			isa = PBXGroup;
 			children = (
 				7EA1227423270A00005E1974 /* AppDelegate.swift */,
+				7EA122AE23271714005E1974 /* Entities */,
+				7EA122A72327132E005E1974 /* Services */,
+				7EA122A623271322005E1974 /* Repositories */,
+				7EA122A523271319005E1974 /* UseCases */,
 				7EA1227623270A00005E1974 /* ViewController.swift */,
 				7EA1227823270A00005E1974 /* Main.storyboard */,
 				7EA1227B23270A01005E1974 /* Assets.xcassets */,
 				7EA1227D23270A01005E1974 /* LaunchScreen.storyboard */,
 				7EA1228023270A01005E1974 /* Info.plist */,
+				7EA122C2232757EC005E1974 /* AppConstants.swift */,
 			);
 			path = CloudySun;
 			sourceTree = "<group>";
@@ -127,6 +156,53 @@
 				7EA1229623270A01005E1974 /* Info.plist */,
 			);
 			path = CloudySunUITests;
+			sourceTree = "<group>";
+		};
+		7EA122A523271319005E1974 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				7EA122B52327330E005E1974 /* UseCaseImpl.swift */,
+				7EA122BB2327351A005E1974 /* GetForecast */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		7EA122A623271322005E1974 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				7EA122B123272D91005E1974 /* CSRepository.swift */,
+				7EA122B3232731ED005E1974 /* CSForecastRepository.swift */,
+				7EA122C023274B31005E1974 /* CSForecastRepositoryImpl.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		7EA122A72327132E005E1974 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7EA122A82327136A005E1974 /* CSService.swift */,
+				7EA122AF23272C82005E1974 /* CSForecastService.swift */,
+				7EA122BC232735F0005E1974 /* CSForecastWebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7EA122AE23271714005E1974 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7EA122AA232713FF005E1974 /* CSLocation.swift */,
+				7EA122AC2327152F005E1974 /* CSWeather.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		7EA122BB2327351A005E1974 /* GetForecast */ = {
+			isa = PBXGroup;
+			children = (
+				7EA122B9232733C4005E1974 /* GetForecast.swift */,
+				7EA122B72327336A005E1974 /* GetForecastUseCase.swift */,
+			);
+			path = GetForecast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,8 +359,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EA122AD2327152F005E1974 /* CSWeather.swift in Sources */,
+				7EA122B82327336A005E1974 /* GetForecastUseCase.swift in Sources */,
+				7EA122A92327136A005E1974 /* CSService.swift in Sources */,
+				7EA122B4232731ED005E1974 /* CSForecastRepository.swift in Sources */,
 				7EA1227723270A00005E1974 /* ViewController.swift in Sources */,
+				7EA122AB232713FF005E1974 /* CSLocation.swift in Sources */,
 				7EA1227523270A00005E1974 /* AppDelegate.swift in Sources */,
+				7EA122B223272D91005E1974 /* CSRepository.swift in Sources */,
+				7EA122B023272C82005E1974 /* CSForecastService.swift in Sources */,
+				7EA122BD232735F0005E1974 /* CSForecastWebService.swift in Sources */,
+				7EA122B62327330E005E1974 /* UseCaseImpl.swift in Sources */,
+				7EA122C3232757EC005E1974 /* AppConstants.swift in Sources */,
+				7EA122C123274B31005E1974 /* CSForecastRepositoryImpl.swift in Sources */,
+				7EA122BA232733C4005E1974 /* GetForecast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
