@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yB3-3I-i91">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--CloudySun-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CloudySun" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,9 +34,109 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="CloudySun" id="7on-HN-cIm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="7gw-X1-ss2">
+                            <connections>
+                                <action selector="editButtonTapped:" destination="BYZ-38-t0r" id="QuY-Ja-lye"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="75"/>
+        </scene>
+        <!--Configuration-->
+        <scene sceneID="Xfp-yv-DfR">
+            <objects>
+                <viewController storyboardIdentifier="EditConfiguration" id="rSG-VO-hVp" customClass="ConfigViewController" customModule="CloudySun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XHV-uV-FwF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lLp-lb-IEk">
+                                <rect key="frame" x="117.5" y="42" width="179" height="29"/>
+                                <segments>
+                                    <segment title="Forecast.io"/>
+                                    <segment title="Weatherbug"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qVd-lj-jMD">
+                                <rect key="frame" x="135.5" y="112" width="143" height="29"/>
+                                <segments>
+                                    <segment title="Farenheit"/>
+                                    <segment title="Celcius"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4R3-84-l15">
+                                <rect key="frame" x="0.0" y="182" width="414" height="550"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cityCell" id="TcC-ly-Mcz">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TcC-ly-Mcz" id="BED-6l-oB6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3396029538" green="1" blue="0.88505993149999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lLp-lb-IEk" firstAttribute="centerX" secondItem="XHV-uV-FwF" secondAttribute="centerX" id="Khx-D5-WYU"/>
+                            <constraint firstItem="4R3-84-l15" firstAttribute="top" secondItem="qVd-lj-jMD" secondAttribute="bottom" constant="42" id="WqK-Tj-GMl"/>
+                            <constraint firstItem="3xu-ce-zSG" firstAttribute="bottom" secondItem="4R3-84-l15" secondAttribute="bottom" constant="42" id="dWY-gB-5dt"/>
+                            <constraint firstItem="4R3-84-l15" firstAttribute="leading" secondItem="3xu-ce-zSG" secondAttribute="leading" id="hG8-kv-qaf"/>
+                            <constraint firstItem="3xu-ce-zSG" firstAttribute="trailing" secondItem="4R3-84-l15" secondAttribute="trailing" id="hvb-W8-dm0"/>
+                            <constraint firstItem="lLp-lb-IEk" firstAttribute="top" secondItem="3xu-ce-zSG" secondAttribute="top" constant="42" id="jJ6-9D-AZg"/>
+                            <constraint firstItem="qVd-lj-jMD" firstAttribute="top" secondItem="lLp-lb-IEk" secondAttribute="bottom" constant="42" id="taB-Sf-RvC"/>
+                            <constraint firstItem="qVd-lj-jMD" firstAttribute="centerX" secondItem="XHV-uV-FwF" secondAttribute="centerX" id="tgJ-vC-rPj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3xu-ce-zSG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Configuration" id="Qk3-aD-YD4">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="lPI-Bm-5Rc">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="rSG-VO-hVp" id="QOH-Xq-E8M"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="edY-N5-IhV">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="rSG-VO-hVp" id="3fV-1k-6Hb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="citiesTableView" destination="4R3-84-l15" id="Lx1-5O-t1m"/>
+                        <outlet property="sourceSegment" destination="lLp-lb-IEk" id="fBV-Ue-Cov"/>
+                        <outlet property="unitsSegment" destination="qVd-lj-jMD" id="N07-Rz-cmg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMu-Z5-YaA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1795.6521739130437" y="75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HjR-Bs-f1D">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yB3-3I-i91" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NSq-wd-sj4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CKL-OL-1UY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fRr-6s-ZPr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="167" y="75"/>
         </scene>
     </scenes>
 </document>

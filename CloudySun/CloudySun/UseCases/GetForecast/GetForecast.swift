@@ -9,5 +9,5 @@
 import Foundation
 
 protocol GetForecast {
-    func execute(with location: CSLocation, using source: CSWeatherSource, completion: @escaping ForecastCallback)
+    func execute(with location: CSLocation, completion: @escaping ForecastCallback)
 }

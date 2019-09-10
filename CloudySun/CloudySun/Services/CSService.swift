@@ -13,12 +13,6 @@ enum ServiceResponse<Model> {
     case failure
 }
 
-enum Response<T> {
-    case failure
-    case notConnectedToInternet
-    case success(objects: [T])
-}
-
 protocol CSService {
     var endpoint: CSWeatherSource { get set }
 }
