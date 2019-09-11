@@ -138,6 +138,7 @@
                         <outlet property="currentWeatherIcon" destination="RFL-lQ-xw9" id="8DZ-hN-a8k"/>
                         <outlet property="currentWeatherLabel" destination="oJD-XH-MRr" id="YWc-eD-aOh"/>
                         <outlet property="dailyWeatherTableView" destination="9JB-rC-HfN" id="G4l-vW-BfA"/>
+                        <outlet property="headerLabel" destination="qd7-qp-67L" id="AvW-Sf-bKb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

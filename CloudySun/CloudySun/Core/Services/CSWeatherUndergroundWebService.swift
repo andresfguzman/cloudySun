@@ -22,7 +22,8 @@ final class CSWeatherUndergroundWebService: CSForecastService {
         let request = AF.request(url).responseJSON { (response) in
             switch response.result {
             case .success:
-                completion(.success(response: Weather.buildWeatherObject(with: response.value as! [String: Any])))
+                let weatherResponse = Weather.buildWeatherObject(with: response.value as! [String: Any])
+                completion(.success(response: weatherResponse))
             case .failure:
                 completion(.failure)
             }

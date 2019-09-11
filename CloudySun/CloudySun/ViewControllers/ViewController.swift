@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var currentWeatherIcon: UIImageView!
     @IBOutlet weak var currentWeatherLabel: UILabel!
     @IBOutlet weak var dailyWeatherTableView: UITableView!
+    @IBOutlet weak var headerLabel: UILabel!
     
     var useCase: GetForecastUseCase!
     var weatherForecast: CSWeather?
@@ -41,7 +42,6 @@ class ViewController: UIViewController {
                 case .success(let weatherInfo):
                     self?.weatherForecast = weatherInfo
                     self?.updateUI()
-                    print(weatherInfo)
                 case .failure:
                     // Execute from local db. (repository impl)
                     print("Failure")
@@ -53,6 +53,7 @@ class ViewController: UIViewController {
     private func updateUI() {
         dailyWeatherTableView.reloadData()
         currentWeatherIcon.image = UIImage(named: weatherForecast?.currently.icon ?? "na.png")
+        headerLabel.text = "Right now at \(AppConstants.shared.selectedCity.name)"
         currentWeatherLabel.text = "\(weatherForecast?.currently.temperature ?? 0.0)°\n\(weatherForecast?.currently.summary ?? "")"
     }
     

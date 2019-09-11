@@ -47,10 +47,6 @@ extension ConfigViewController: UITableViewDelegate, UITableViewDataSource {
         let cellCity = AppConstants.shared.cities[indexPath.row]
         cell.textLabel?.text = cellCity.name
         
-        if cellCity.name.elementsEqual(AppConstants.shared.selectedCity.name) {
-            cell.accessoryType = .checkmark
-        }
-        
         return cell
     }
     

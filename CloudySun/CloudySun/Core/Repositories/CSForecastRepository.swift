@@ -9,5 +9,6 @@
 import Foundation
 
 protocol CSForecastRepository: CSRepository {
-    func listForecast(with location: CSLocation, completion: @escaping ForecastCallback)
+    func listForecast(completion: @escaping ForecastCallback)
+    func saveCacheData(with weatherObject: CSWeather, completion: @escaping (SaveStatus) -> Void)
 }

@@ -9,8 +9,16 @@
 import Foundation
 
 final class CSForecastRepositoryImpl: CSForecastRepository {
-    func listForecast(with location: CSLocation, completion: @escaping ForecastCallback) {
-        print("Executed list forecast from repository.")
-        completion(nil)
+    func saveCacheData(with weatherObject: CSWeather, completion: @escaping (SaveStatus) -> Void) {
+        let data = try! JSONEncoder().encode(weatherObject as! Weather)
+        UserDefaults.standard.set(data, forKey: AppConstants.shared.selectedCity.name)
+        completion(.success)
+    }
+    
+    func listForecast(completion: @escaping ForecastCallback) {
+        let rawWeather = UserDefaults.standard.value(forKey: AppConstants.shared.selectedCity.name) as! Data
+        let weatherObject = try! JSONDecoder().decode(Weather.self, from: rawWeather)
+        print(weatherObject)
+        completion(.success(weatherInfo: weatherObject))
     }
 }
