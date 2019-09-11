@@ -13,29 +13,21 @@ class ConfigViewController: UIViewController {
     @IBOutlet weak var sourceSegment: UISegmentedControl!
     @IBOutlet weak var unitsSegment: UISegmentedControl!
     
+    var selectedCity: CSCity?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.citiesTableView.dataSource = self
         self.citiesTableView.delegate = self
         
         self.sourceSegment.selectedSegmentIndex = AppConstants.shared.selectedEndpoint.rawValue
-        if AppConstants.shared.selectedUnitSystem == .international {
-            self.unitsSegment.selectedSegmentIndex = 1
-        } else {
-            self.unitsSegment.selectedSegmentIndex = 0
-        }
-        
+        self.unitsSegment.selectedSegmentIndex = AppConstants.shared.selectedUnitSystem.rawValue
     }
 
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
-        if self.unitsSegment.selectedSegmentIndex == 0 {
-            AppConstants.shared.selectedUnitSystem = .imperial
-        } else {
-            AppConstants.shared.selectedUnitSystem = .international
-        }
-        
+        AppConstants.shared.selectedUnitSystem = CSUnits(rawValue: self.unitsSegment.selectedSegmentIndex) ?? .imperial
         AppConstants.shared.selectedEndpoint = CSWeatherSource(rawValue: self.sourceSegment.selectedSegmentIndex) ?? .forecastIO
-        
+        AppConstants.shared.selectedCity = self.selectedCity ?? AppConstants.shared.selectedCity
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -51,7 +43,7 @@ extension ConfigViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.citiesTableView.dequeueReusableCell(withIdentifier: "cityCell", for: indexPath)
+        let cell = self.citiesTableView.dequeueReusableCell(withIdentifier: AppConstants.shared.cityCellIdentifier, for: indexPath)
         let cellCity = AppConstants.shared.cities[indexPath.row]
         cell.textLabel?.text = cellCity.name
         
@@ -61,5 +53,9 @@ extension ConfigViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedCity = AppConstants.shared.cities[indexPath.row]
+    }
+    
 }

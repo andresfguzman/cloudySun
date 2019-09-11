@@ -15,12 +15,14 @@ protocol CSWeather {
 
 protocol CSCurrently {
     var time: Double {get}
+    var icon: String {get}
     var summary: String {get}
     var temperature: Double {get}
 }
 
 protocol CSDailyReading {
     var time: Double {get}
+    var icon: String {get}
     var summary: String {get}
     var temperatureMax: Double {get}
     var temperatureMin: Double {get}

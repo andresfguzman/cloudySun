@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum CSUnits {
+enum CSUnits: Int {
     case imperial
     case international
 }

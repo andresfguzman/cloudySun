@@ -16,6 +16,8 @@ final class AppConstants {
 
     let mainStoryBoardIdentifier = "Main"
     let editVCIdentifier = "EditConfiguration"
+    let cityCellIdentifier = "cityCell"
+    
     var selectedUnitSystem: CSUnits = .international
     var selectedEndpoint: CSWeatherSource = .forecastIO
     var selectedCity: CSCity = CSCity(location: CSLocation(latitude: 4.609, longitude: -74.081), name: "Bogota")

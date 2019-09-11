@@ -32,6 +32,7 @@
 		7EA122C3232757EC005E1974 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122C2232757EC005E1974 /* AppConstants.swift */; };
 		7EA122C523276116005E1974 /* CSCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122C423276116005E1974 /* CSCity.swift */; };
 		7EA122C8232766E5005E1974 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122C7232766E5005E1974 /* ConfigViewController.swift */; };
+		7EBA2B7023289FE80030E6E3 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA2B6F23289FE80030E6E3 /* WeatherTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		7EA122C2232757EC005E1974 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		7EA122C423276116005E1974 /* CSCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSCity.swift; sourceTree = "<group>"; };
 		7EA122C7232766E5005E1974 /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
+		7EBA2B6F23289FE80030E6E3 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		7E1D019323289FA700296ABA /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				7EBA2B6F23289FE80030E6E3 /* WeatherTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		7EA1226823270A00005E1974 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +160,7 @@
 				7EA122A623271322005E1974 /* Repositories */,
 				7EA122A523271319005E1974 /* UseCases */,
 				7EA122C6232766B8005E1974 /* ViewControllers */,
+				7E1D019323289FA700296ABA /* TableViewCells */,
 				7EA1227823270A00005E1974 /* Main.storyboard */,
 				7EA1227B23270A01005E1974 /* Assets.xcassets */,
 				7EA1227D23270A01005E1974 /* LaunchScreen.storyboard */,
@@ -390,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EBA2B7023289FE80030E6E3 /* WeatherTableViewCell.swift in Sources */,
 				7EA122AD2327152F005E1974 /* Weather.swift in Sources */,
 				7E1D019123285F5C00296ABA /* CSWeatherUndergroundWebService.swift in Sources */,
 				7E1D018C2328507400296ABA /* CSWeatherSource.swift in Sources */,
