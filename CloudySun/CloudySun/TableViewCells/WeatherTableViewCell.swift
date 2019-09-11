@@ -25,7 +25,7 @@ class WeatherTableViewCell: UITableViewCell {
         if let dailyWeather = weatherInfo {
             weekDayLabel.text = dailyWeather.weekDay
             dayWeatherLabel.text = dailyWeather.summary
-            weatherIcon.image = UIImage(named: "03.png")
+            weatherIcon.image = UIImage(named: dailyWeather.icon)
         }
     }
 }

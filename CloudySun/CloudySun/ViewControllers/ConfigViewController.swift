@@ -48,7 +48,7 @@ extension ConfigViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = cellCity.name
         
         if cellCity.name.elementsEqual(AppConstants.shared.selectedCity.name) {
-            cell.setSelected(true, animated: true)
+            cell.accessoryType = .checkmark
         }
         
         return cell
@@ -56,6 +56,11 @@ extension ConfigViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedCity = AppConstants.shared.cities[indexPath.row]
+        tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.accessoryType = .none
     }
     
 }

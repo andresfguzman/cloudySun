@@ -17,24 +17,36 @@ struct Weather: Codable, CSWeather {
         let maxTemps = dictionary["temperatureMax"] as! [NSNumber]
         let minTemps = dictionary["temperatureMin"] as! [NSNumber]
         let narratives = dictionary["narrative"] as! [String]
+        
         let dayPart = dictionary["daypart"] as! [Any]
-        let dayPartDict = dayPart[0] as! [String: Any]
-        let icons = dayPartDict["iconCode"] as! [NSNumber?]
-        let currently = Currently(time: times[0].doubleValue, icon: weatherUndergroundIcon(at: 0, in: icons), summary: narratives[0], temperature: minTemps[0].doubleValue)
+        let icons = iconsForDay(dayPart: dayPart)
+        
+        let currently = Currently(time: times[0].doubleValue, icon: icons[0], summary: narratives[0], temperature: minTemps[0].doubleValue)
         var dailyReadings = [DailyReading]()
         for n in 1...times.count - 1 {
-            dailyReadings.append(DailyReading(time: times[n].doubleValue, icon: weatherUndergroundIcon(at: n, in: icons), summary: narratives[n], temperatureMax: maxTemps[n].doubleValue, temperatureMin: minTemps[n].doubleValue))
+            dailyReadings.append(DailyReading(time: times[n].doubleValue, icon: icons[n - 1], summary: narratives[n], temperatureMax: maxTemps[n].doubleValue, temperatureMin: minTemps[n].doubleValue))
         }
         return Weather(currently: currently, daily: Daily(data: dailyReadings))
     }
     
-    private static func weatherUndergroundIcon(at index: Int, in array: [NSNumber?]) -> String {
-        if let icon = array[index] {
-            return icon.stringValue
-        } else {
-            return array[index+1]?.stringValue ?? "0"
+    // Build only daylight icons
+    private static func iconsForDay(dayPart: [Any]) -> [String] {
+        let dayPartDict = dayPart[0] as! [String: Any]
+        let dayOrNight = dayPartDict["dayOrNight"] as! [String?]
+        let icons = dayPartDict["iconCode"] as! [NSNumber?]
+        var stringIcons = [String]()
+        
+        for i in 0...dayOrNight.count - 1 {
+            if let dayTime = dayOrNight[i] {
+                if dayTime.elementsEqual("D") {
+                    stringIcons.append(icons[i]?.stringValue ?? "na")
+                }
+            }
         }
+        
+        return stringIcons
     }
+    
 }
 
 struct Currently: Codable, CSCurrently {

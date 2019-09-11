@@ -52,7 +52,8 @@ class ViewController: UIViewController {
     
     private func updateUI() {
         dailyWeatherTableView.reloadData()
-        currentWeatherLabel.text = "\(weatherForecast?.currently.temperature ?? 0.0)*\n\(weatherForecast?.currently.summary ?? "")"
+        currentWeatherIcon.image = UIImage(named: weatherForecast?.currently.icon ?? "na.png")
+        currentWeatherLabel.text = "\(weatherForecast?.currently.temperature ?? 0.0)°\n\(weatherForecast?.currently.summary ?? "")"
     }
     
     @IBAction func editButtonTapped(_ sender: UIBarButtonItem) {
@@ -68,7 +69,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = dailyWeatherTableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath) as! WeatherTableViewCell
+        let cell = dailyWeatherTableView.dequeueReusableCell(withIdentifier: AppConstants.shared.weatherCellIdentifier, for: indexPath) as! WeatherTableViewCell
         if let weatherForecast = weatherForecast {
             let viewModel = CSDailyReadingViewModel(with: weatherForecast.daily.data[indexPath.row])
             cell.configure(with: viewModel)

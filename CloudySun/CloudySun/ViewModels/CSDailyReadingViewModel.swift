@@ -15,7 +15,7 @@ struct CSDailyReadingViewModel {
     
     init(with weather: CSDailyReading) {
         self.weekDay = weather.weekDay
-        self.icon = weather.icon
-        self.summary = "Min: \(weather.temperatureMin)*\nMax: \(weather.temperatureMax)*\n\(weather.summary)"
+        self.icon = "\(weather.icon).png"
+        self.summary = "Min: \(weather.temperatureMin)°\nMax: \(weather.temperatureMax)°\n\(weather.summary)"
     }
 }

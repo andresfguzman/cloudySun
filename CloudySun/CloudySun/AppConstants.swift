@@ -17,6 +17,7 @@ final class AppConstants {
     let mainStoryBoardIdentifier = "Main"
     let editVCIdentifier = "EditConfiguration"
     let cityCellIdentifier = "cityCell"
+    let weatherCellIdentifier = "weatherCell"
     
     var selectedUnitSystem: CSUnits = .international
     var selectedEndpoint: CSWeatherSource = .forecastIO
