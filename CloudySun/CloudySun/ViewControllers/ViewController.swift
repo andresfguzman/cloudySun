@@ -69,7 +69,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = dailyWeatherTableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath) as! WeatherTableViewCell
-        cell.configure(with: weatherForecast?.daily.data[indexPath.row] ?? nil)
+        if let weatherForecast = weatherForecast {
+            let viewModel = CSDailyReadingViewModel(with: weatherForecast.daily.data[indexPath.row])
+            cell.configure(with: viewModel)
+        }
+        
         return cell
     }
 }

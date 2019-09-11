@@ -21,10 +21,11 @@ class WeatherTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    func configure(with weatherInfo: DailyReading?) {
+    func configure(with weatherInfo: CSDailyReadingViewModel?) {
         if let dailyWeather = weatherInfo {
-            weekDayLabel.text = "\(dailyWeather.time)"
-            dayWeatherLabel.text = "Min: \(dailyWeather.temperatureMin)*\nMax: \(dailyWeather.temperatureMax)*\n\(dailyWeather.summary)"
+            weekDayLabel.text = dailyWeather.weekDay
+            dayWeatherLabel.text = dailyWeather.summary
+            weatherIcon.image = UIImage(named: "03.png")
         }
     }
 }

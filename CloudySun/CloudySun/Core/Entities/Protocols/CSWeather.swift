@@ -27,3 +27,12 @@ protocol CSDailyReading {
     var temperatureMax: Double {get}
     var temperatureMin: Double {get}
 }
+
+extension CSDailyReading {
+    var weekDay: String {
+        let date = Date(timeIntervalSince1970: self.time)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEE"
+        return dateFormatter.string(from: date)
+    }
+}
