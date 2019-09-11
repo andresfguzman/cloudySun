@@ -1,15 +1,15 @@
 //
-//  CSForecastWebService.swift
+//  CSWeatherUndergroundWebService.swift
 //  CloudySun
 //
-//  Created by Andrés Guzmán on 9/9/19.
+//  Created by Andrés Guzmán on 9/10/19.
 //  Copyright © 2019 Andres Felipe Guzman Lopez. All rights reserved.
 //
 
 import Foundation
 import Alamofire
 
-final class CSForecastWebService: CSForecastService {
+final class CSWeatherUndergroundWebService: CSForecastService {
     
     var endpoint: CSWeatherSource
     
@@ -19,14 +19,10 @@ final class CSForecastWebService: CSForecastService {
     
     func getForecast(with location: CSLocation, completion: @escaping (ServiceResponse<CSWeather>) -> Void) -> DataRequest {
         let url = AppConstants.shared.selectedEndpoint.buildURL(with: AppConstants.shared.selectedUnitSystem, location: location)
-        let request = AF.request(url).responseDecodable { (response: DataResponse<Weather, AFError>) in
+        let request = AF.request(url).responseJSON { (response) in
             switch response.result {
             case .success:
-                if let weather = response.value {
-                    completion(.success(response: weather))
-                } else {
-                    completion(.failure)
-                }
+                completion(.success(response: Weather.buildWeatherObject(with: response.value as! [String: Any])))
             case .failure:
                 completion(.failure)
             }

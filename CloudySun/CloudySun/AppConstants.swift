@@ -8,24 +8,12 @@
 
 import Foundation
 
-enum CSWeatherSource: Int {
-    case forecastIO
-    case weatherBug
-    case other
-}
-
-enum CSUnits: String {
-    case imperial = "us"
-    case international = "si"
-}
-
-final class AppConstants: NSObject {
+final class AppConstants {
     
     static let shared = AppConstants()
     
-    private override init() {}
-    
-    let forecastIOKey = "845f2bc9019ba09f0e063b33c222ec79"
+    private init() {}
+
     let mainStoryBoardIdentifier = "Main"
     let editVCIdentifier = "EditConfiguration"
     var selectedUnitSystem: CSUnits = .international
@@ -41,14 +29,4 @@ final class AppConstants: NSObject {
         
         return citieshub
     }
-    
-    public func endpoint(for source: CSWeatherSource) -> String {
-        switch source {
-        case .forecastIO:
-            return "https://api.darksky.net/forecast/\(forecastIOKey)/%f,%f?units=%@"
-        default:
-            return ""
-        }
-    }
-    
 }

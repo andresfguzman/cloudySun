@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E1D018C2328507400296ABA /* CSWeatherSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1D018B2328507400296ABA /* CSWeatherSource.swift */; };
+		7E1D018F23285BD600296ABA /* CSWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1D018E23285BD600296ABA /* CSWeather.swift */; };
+		7E1D019123285F5C00296ABA /* CSWeatherUndergroundWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1D019023285F5C00296ABA /* CSWeatherUndergroundWebService.swift */; };
 		7EA1227523270A00005E1974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1227423270A00005E1974 /* AppDelegate.swift */; };
 		7EA1227723270A00005E1974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1227623270A00005E1974 /* ViewController.swift */; };
 		7EA1227A23270A00005E1974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA1227823270A00005E1974 /* Main.storyboard */; };
@@ -17,7 +20,7 @@
 		7EA122A32327107B005E1974 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA122A22327107B005E1974 /* Alamofire.framework */; };
 		7EA122A92327136A005E1974 /* CSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122A82327136A005E1974 /* CSService.swift */; };
 		7EA122AB232713FF005E1974 /* CSLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122AA232713FF005E1974 /* CSLocation.swift */; };
-		7EA122AD2327152F005E1974 /* CSWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122AC2327152F005E1974 /* CSWeather.swift */; };
+		7EA122AD2327152F005E1974 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122AC2327152F005E1974 /* Weather.swift */; };
 		7EA122B023272C82005E1974 /* CSForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122AF23272C82005E1974 /* CSForecastService.swift */; };
 		7EA122B223272D91005E1974 /* CSRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122B123272D91005E1974 /* CSRepository.swift */; };
 		7EA122B4232731ED005E1974 /* CSForecastRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122B3232731ED005E1974 /* CSForecastRepository.swift */; };
@@ -49,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E1D018B2328507400296ABA /* CSWeatherSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSWeatherSource.swift; sourceTree = "<group>"; };
+		7E1D018E23285BD600296ABA /* CSWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSWeather.swift; sourceTree = "<group>"; };
+		7E1D019023285F5C00296ABA /* CSWeatherUndergroundWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSWeatherUndergroundWebService.swift; sourceTree = "<group>"; };
 		7EA1227123270A00005E1974 /* CloudySun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudySun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA1227423270A00005E1974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EA1227623270A00005E1974 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +71,7 @@
 		7EA122A22327107B005E1974 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		7EA122A82327136A005E1974 /* CSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSService.swift; sourceTree = "<group>"; };
 		7EA122AA232713FF005E1974 /* CSLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSLocation.swift; sourceTree = "<group>"; };
-		7EA122AC2327152F005E1974 /* CSWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSWeather.swift; sourceTree = "<group>"; };
+		7EA122AC2327152F005E1974 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		7EA122AF23272C82005E1974 /* CSForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSForecastService.swift; sourceTree = "<group>"; };
 		7EA122B123272D91005E1974 /* CSRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSRepository.swift; sourceTree = "<group>"; };
 		7EA122B3232731ED005E1974 /* CSForecastRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSForecastRepository.swift; sourceTree = "<group>"; };
@@ -105,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E1D018D23285BBB00296ABA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7E1D018E23285BD600296ABA /* CSWeather.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		7EA1226823270A00005E1974 = {
 			isa = PBXGroup;
 			children = (
@@ -129,13 +143,13 @@
 		7EA1227323270A00005E1974 /* CloudySun */ = {
 			isa = PBXGroup;
 			children = (
-				7EA122C6232766B8005E1974 /* ViewControllers */,
 				7EA1227423270A00005E1974 /* AppDelegate.swift */,
 				7EA122C2232757EC005E1974 /* AppConstants.swift */,
 				7EA122AE23271714005E1974 /* Entities */,
 				7EA122A72327132E005E1974 /* Services */,
 				7EA122A623271322005E1974 /* Repositories */,
 				7EA122A523271319005E1974 /* UseCases */,
+				7EA122C6232766B8005E1974 /* ViewControllers */,
 				7EA1227823270A00005E1974 /* Main.storyboard */,
 				7EA1227B23270A01005E1974 /* Assets.xcassets */,
 				7EA1227D23270A01005E1974 /* LaunchScreen.storyboard */,
@@ -187,6 +201,7 @@
 				7EA122A82327136A005E1974 /* CSService.swift */,
 				7EA122AF23272C82005E1974 /* CSForecastService.swift */,
 				7EA122BC232735F0005E1974 /* CSForecastWebService.swift */,
+				7E1D019023285F5C00296ABA /* CSWeatherUndergroundWebService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -194,9 +209,11 @@
 		7EA122AE23271714005E1974 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				7E1D018D23285BBB00296ABA /* Protocols */,
 				7EA122AA232713FF005E1974 /* CSLocation.swift */,
 				7EA122C423276116005E1974 /* CSCity.swift */,
-				7EA122AC2327152F005E1974 /* CSWeather.swift */,
+				7EA122AC2327152F005E1974 /* Weather.swift */,
+				7E1D018B2328507400296ABA /* CSWeatherSource.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -373,7 +390,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EA122AD2327152F005E1974 /* CSWeather.swift in Sources */,
+				7EA122AD2327152F005E1974 /* Weather.swift in Sources */,
+				7E1D019123285F5C00296ABA /* CSWeatherUndergroundWebService.swift in Sources */,
+				7E1D018C2328507400296ABA /* CSWeatherSource.swift in Sources */,
+				7E1D018F23285BD600296ABA /* CSWeather.swift in Sources */,
 				7EA122C523276116005E1974 /* CSCity.swift in Sources */,
 				7EA122B82327336A005E1974 /* GetForecastUseCase.swift in Sources */,
 				7EA122A92327136A005E1974 /* CSService.swift in Sources */,

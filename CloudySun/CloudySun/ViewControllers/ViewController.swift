@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var useCase: GetForecast!
+    var useCase: GetForecastUseCase!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,13 @@ class ViewController: UIViewController {
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         // Move to presenter.
-        useCase = GetForecastUseCase(repository: CSForecastRepositoryImpl(), service: CSForecastWebService(endpoint: AppConstants.shared.selectedEndpoint))
+        switch AppConstants.shared.selectedEndpoint {
+        case .forecastIO:
+            useCase = GetForecastUseCase(repository: CSForecastRepositoryImpl(), service: CSForecastWebService(endpoint: AppConstants.shared.selectedEndpoint))
+        default:
+            useCase = GetForecastUseCase(repository: CSForecastRepositoryImpl(), service: CSWeatherUndergroundWebService(endpoint: AppConstants.shared.selectedEndpoint))
+        }
+        
         useCase.execute(with: AppConstants.shared.selectedCity.location) { (response) in
             if let result = response {
                 switch result {
