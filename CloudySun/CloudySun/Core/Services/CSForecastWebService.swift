@@ -17,9 +17,9 @@ final class CSForecastWebService: CSForecastService {
         self.endpoint = endpoint
     }
     
-    func getForecast(with location: CSLocation, completion: @escaping (ServiceResponse<CSWeather>) -> Void) -> DataRequest {
+    func getForecast(with location: CSLocation, completion: @escaping (ServiceResponse<CSWeather>) -> Void) {
         let url = AppConstants.shared.selectedEndpoint.buildURL(with: AppConstants.shared.selectedUnitSystem, location: location)
-        let request = AF.request(url).responseDecodable { (response: DataResponse<Weather, AFError>) in
+        AF.request(url).responseDecodable { (response: DataResponse<Weather, AFError>) in
             switch response.result {
             case .success:
                 if let weather = response.value {
@@ -31,6 +31,5 @@ final class CSForecastWebService: CSForecastService {
                 completion(.failure)
             }
         }
-        return request
     }
 }

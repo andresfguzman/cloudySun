@@ -8,11 +8,16 @@
 
 import UIKit
 
-class ConfigViewController: UIViewController {
+protocol SettingsViewDelegate: class {
+    func reloadDashboard()
+}
+
+class ConfigViewController: CSBaseViewController {
     @IBOutlet weak var citiesTableView: UITableView!
     @IBOutlet weak var sourceSegment: UISegmentedControl!
     @IBOutlet weak var unitsSegment: UISegmentedControl!
     
+    weak var delegate: SettingsViewDelegate?
     var selectedCity: CSCity?
     
     override func viewDidLoad() {
@@ -29,6 +34,7 @@ class ConfigViewController: UIViewController {
         AppConstants.shared.selectedEndpoint = CSWeatherSource(rawValue: self.sourceSegment.selectedSegmentIndex) ?? .forecastIO
         AppConstants.shared.selectedCity = self.selectedCity ?? AppConstants.shared.selectedCity
         self.navigationController?.popViewController(animated: true)
+        delegate?.reloadDashboard()
     }
     
     @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {

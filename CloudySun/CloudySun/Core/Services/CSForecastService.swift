@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Alamofire
 
 enum ForecastServiceResponse {
     case success(weatherInfo: CSWeather)
@@ -17,6 +16,5 @@ enum ForecastServiceResponse {
 typealias ForecastCallback = (ForecastServiceResponse?) -> Void
 
 protocol CSForecastService: CSService {
-    @discardableResult
-    func getForecast(with location: CSLocation, completion: @escaping (ServiceResponse<CSWeather>) -> Void) -> DataRequest
+    func getForecast(with location: CSLocation, completion: @escaping (ServiceResponse<CSWeather>) -> Void)
 }

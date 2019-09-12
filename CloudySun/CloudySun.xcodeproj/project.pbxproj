@@ -11,11 +11,10 @@
 		7E1D018F23285BD600296ABA /* CSWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1D018E23285BD600296ABA /* CSWeather.swift */; };
 		7E1D019123285F5C00296ABA /* CSWeatherUndergroundWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1D019023285F5C00296ABA /* CSWeatherUndergroundWebService.swift */; };
 		7EA1227523270A00005E1974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1227423270A00005E1974 /* AppDelegate.swift */; };
-		7EA1227723270A00005E1974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1227623270A00005E1974 /* ViewController.swift */; };
+		7EA1227723270A00005E1974 /* CSWeatherDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1227623270A00005E1974 /* CSWeatherDashboardViewController.swift */; };
 		7EA1227A23270A00005E1974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA1227823270A00005E1974 /* Main.storyboard */; };
 		7EA1227C23270A01005E1974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EA1227B23270A01005E1974 /* Assets.xcassets */; };
 		7EA1227F23270A01005E1974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA1227D23270A01005E1974 /* LaunchScreen.storyboard */; };
-		7EA1228A23270A01005E1974 /* CloudySunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1228923270A01005E1974 /* CloudySunTests.swift */; };
 		7EA1229523270A01005E1974 /* CloudySunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1229423270A01005E1974 /* CloudySunUITests.swift */; };
 		7EA122A32327107B005E1974 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA122A22327107B005E1974 /* Alamofire.framework */; };
 		7EA122A92327136A005E1974 /* CSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122A82327136A005E1974 /* CSService.swift */; };
@@ -32,8 +31,16 @@
 		7EA122C3232757EC005E1974 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122C2232757EC005E1974 /* AppConstants.swift */; };
 		7EA122C523276116005E1974 /* CSCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122C423276116005E1974 /* CSCity.swift */; };
 		7EA122C8232766E5005E1974 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA122C7232766E5005E1974 /* ConfigViewController.swift */; };
+		7EA17B032329F18200DBF5BF /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA17B022329F18200DBF5BF /* Mocks.swift */; };
 		7EBA2B7023289FE80030E6E3 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA2B6F23289FE80030E6E3 /* WeatherTableViewCell.swift */; };
 		7EBA2B742328AED80030E6E3 /* CSDailyReadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA2B732328AED80030E6E3 /* CSDailyReadingViewModel.swift */; };
+		7EDAEE432329A95400D75D66 /* CSWeatherDashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDAEE422329A95400D75D66 /* CSWeatherDashboardPresenter.swift */; };
+		7EDAEE452329C2E600D75D66 /* CSBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDAEE442329C2E600D75D66 /* CSBaseViewController.swift */; };
+		7EDAEE492329CB4C00D75D66 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDAEE482329CB4B00D75D66 /* SVProgressHUD.framework */; };
+		7EDAEE4B2329CCFC00D75D66 /* CSWeatherDashboardPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDAEE4A2329CCFC00D75D66 /* CSWeatherDashboardPresenterTests.swift */; };
+		7EDAEE4E2329CDA300D75D66 /* MockedWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDAEE4D2329CDA300D75D66 /* MockedWeatherService.swift */; };
+		7EDAEE522329D13C00D75D66 /* MockedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDAEE512329D13C00D75D66 /* MockedRepository.swift */; };
+		7EDAEE542329E59800D75D66 /* MockedDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDAEE532329E59800D75D66 /* MockedDashboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,13 +66,12 @@
 		7E1D019023285F5C00296ABA /* CSWeatherUndergroundWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSWeatherUndergroundWebService.swift; sourceTree = "<group>"; };
 		7EA1227123270A00005E1974 /* CloudySun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudySun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA1227423270A00005E1974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7EA1227623270A00005E1974 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7EA1227623270A00005E1974 /* CSWeatherDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSWeatherDashboardViewController.swift; sourceTree = "<group>"; };
 		7EA1227923270A00005E1974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EA1227B23270A01005E1974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EA1227E23270A01005E1974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EA1228023270A01005E1974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EA1228523270A01005E1974 /* CloudySunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudySunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7EA1228923270A01005E1974 /* CloudySunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudySunTests.swift; sourceTree = "<group>"; };
 		7EA1228B23270A01005E1974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EA1229023270A01005E1974 /* CloudySunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudySunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA1229423270A01005E1974 /* CloudySunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudySunUITests.swift; sourceTree = "<group>"; };
@@ -85,8 +91,16 @@
 		7EA122C2232757EC005E1974 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		7EA122C423276116005E1974 /* CSCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSCity.swift; sourceTree = "<group>"; };
 		7EA122C7232766E5005E1974 /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
+		7EA17B022329F18200DBF5BF /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		7EBA2B6F23289FE80030E6E3 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		7EBA2B732328AED80030E6E3 /* CSDailyReadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSDailyReadingViewModel.swift; sourceTree = "<group>"; };
+		7EDAEE422329A95400D75D66 /* CSWeatherDashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSWeatherDashboardPresenter.swift; sourceTree = "<group>"; };
+		7EDAEE442329C2E600D75D66 /* CSBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSBaseViewController.swift; sourceTree = "<group>"; };
+		7EDAEE482329CB4B00D75D66 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
+		7EDAEE4A2329CCFC00D75D66 /* CSWeatherDashboardPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSWeatherDashboardPresenterTests.swift; sourceTree = "<group>"; };
+		7EDAEE4D2329CDA300D75D66 /* MockedWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedWeatherService.swift; sourceTree = "<group>"; };
+		7EDAEE512329D13C00D75D66 /* MockedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedRepository.swift; sourceTree = "<group>"; };
+		7EDAEE532329E59800D75D66 /* MockedDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedDashboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EDAEE492329CB4C00D75D66 /* SVProgressHUD.framework in Frameworks */,
 				7EA122A32327107B005E1974 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +153,7 @@
 				7EA1228823270A01005E1974 /* CloudySunTests */,
 				7EA1229323270A01005E1974 /* CloudySunUITests */,
 				7EA1227223270A00005E1974 /* Products */,
+				7EDAEE482329CB4B00D75D66 /* SVProgressHUD.framework */,
 				7EA122A22327107B005E1974 /* Alamofire.framework */,
 			);
 			sourceTree = "<group>";
@@ -159,6 +175,7 @@
 				7EA122C2232757EC005E1974 /* AppConstants.swift */,
 				7EBA2B722328AEB50030E6E3 /* Core */,
 				7EA122C6232766B8005E1974 /* ViewControllers */,
+				7EDAEE412329A93D00D75D66 /* Presenters */,
 				7EBA2B712328AEA80030E6E3 /* ViewModels */,
 				7E1D019323289FA700296ABA /* TableViewCells */,
 				7EA1227823270A00005E1974 /* Main.storyboard */,
@@ -172,7 +189,8 @@
 		7EA1228823270A01005E1974 /* CloudySunTests */ = {
 			isa = PBXGroup;
 			children = (
-				7EA1228923270A01005E1974 /* CloudySunTests.swift */,
+				7EDAEE4C2329CD8700D75D66 /* Mocks */,
+				7EDAEE4A2329CCFC00D75D66 /* CSWeatherDashboardPresenterTests.swift */,
 				7EA1228B23270A01005E1974 /* Info.plist */,
 			);
 			path = CloudySunTests;
@@ -241,7 +259,8 @@
 		7EA122C6232766B8005E1974 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7EA1227623270A00005E1974 /* ViewController.swift */,
+				7EDAEE442329C2E600D75D66 /* CSBaseViewController.swift */,
+				7EA1227623270A00005E1974 /* CSWeatherDashboardViewController.swift */,
 				7EA122C7232766E5005E1974 /* ConfigViewController.swift */,
 			);
 			path = ViewControllers;
@@ -264,6 +283,25 @@
 				7EA122A523271319005E1974 /* UseCases */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		7EDAEE412329A93D00D75D66 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				7EDAEE422329A95400D75D66 /* CSWeatherDashboardPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		7EDAEE4C2329CD8700D75D66 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7EA17B022329F18200DBF5BF /* Mocks.swift */,
+				7EDAEE4D2329CDA300D75D66 /* MockedWeatherService.swift */,
+				7EDAEE512329D13C00D75D66 /* MockedRepository.swift */,
+				7EDAEE532329E59800D75D66 /* MockedDashboardView.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +376,7 @@
 					};
 					7EA1228423270A01005E1974 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 						TestTargetID = 7EA1227023270A00005E1974;
 					};
 					7EA1228F23270A01005E1974 = {
@@ -403,6 +442,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -429,9 +469,11 @@
 				7EA122B82327336A005E1974 /* GetForecastUseCase.swift in Sources */,
 				7EA122A92327136A005E1974 /* CSService.swift in Sources */,
 				7EA122B4232731ED005E1974 /* CSForecastRepository.swift in Sources */,
-				7EA1227723270A00005E1974 /* ViewController.swift in Sources */,
+				7EA1227723270A00005E1974 /* CSWeatherDashboardViewController.swift in Sources */,
 				7EA122AB232713FF005E1974 /* CSLocation.swift in Sources */,
 				7EBA2B742328AED80030E6E3 /* CSDailyReadingViewModel.swift in Sources */,
+				7EDAEE452329C2E600D75D66 /* CSBaseViewController.swift in Sources */,
+				7EDAEE432329A95400D75D66 /* CSWeatherDashboardPresenter.swift in Sources */,
 				7EA1227523270A00005E1974 /* AppDelegate.swift in Sources */,
 				7EA122B223272D91005E1974 /* CSRepository.swift in Sources */,
 				7EA122B023272C82005E1974 /* CSForecastService.swift in Sources */,
@@ -448,7 +490,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EA1228A23270A01005E1974 /* CloudySunTests.swift in Sources */,
+				7EDAEE542329E59800D75D66 /* MockedDashboardView.swift in Sources */,
+				7EDAEE522329D13C00D75D66 /* MockedRepository.swift in Sources */,
+				7EDAEE4B2329CCFC00D75D66 /* CSWeatherDashboardPresenterTests.swift in Sources */,
+				7EDAEE4E2329CDA300D75D66 /* MockedWeatherService.swift in Sources */,
+				7EA17B032329F18200DBF5BF /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,6 +706,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WYWUC4P4DY;
 				INFOPLIST_FILE = CloudySunTests/Info.plist;
@@ -670,6 +717,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.anfegu.CloudySunTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CloudySun.app/CloudySun";
@@ -681,6 +729,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WYWUC4P4DY;
 				INFOPLIST_FILE = CloudySunTests/Info.plist;
